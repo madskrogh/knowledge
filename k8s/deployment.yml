@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+    name: api-deployment
+    namespace: mynamspace
+    labels: knowledge
+spec:
+    replicas: 1
+    selector: 
+        matchLabels: api
+    template:
+        metadata:
+            labels:
+                app: api
+        spec:
+            containers: 
+            - name: api
+                image: myrepository/knowledge/prod:100
+                ports: 
+                - containerPort: 8080

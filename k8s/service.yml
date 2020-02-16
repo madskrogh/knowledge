@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+    name: api-service
+    namespace: mynamespace
+    labels:
+        app: api
+spec:
+    type: NodePort
+    ports:
+    - port: 8080
+        nodePort: 433
+    selector:
+        app: api
