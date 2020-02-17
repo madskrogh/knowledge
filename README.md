@@ -14,10 +14,12 @@ API Endpoints
     * get (all documents, specific version)
 
 Deploy
-* cd cmd/local
-* go build main.go
-* docker-compose build
-* docker-compose up
-* docker exec -it local_db_1 bin/bash
-* docker exec -it local_api_1 bin/bash
-
+* *cd cmd/local*
+* *go build main.go*
+* *docker-compose build*
+* *docker-compose up*
+* For database administration: *docker exec -it local_db_1 bin/bash* 
+* For api log file access: *docker exec -it local_api_1 bin/bash*
+* For functional testing of the running api
+    * *cd pkg/http*
+    * *go test*
