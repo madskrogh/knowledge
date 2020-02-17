@@ -15,7 +15,7 @@ API Endpoints
 
 Deploy
 * *cd cmd/local*
-* *go build main.go*
+* *env GOOS=linux GOARCH=amd64 go build main.go*
 * *docker-compose build*
 * *docker-compose up*
 * For database administration: *docker exec -it local_db_1 bin/bash* 
